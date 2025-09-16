@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo $SHELL)",
+      "Bash(echo $TERM)",
+      "Bash(source:*)",
+      "WebFetch(domain:www.notion.so)",
+      "Bash(claude --version)",
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(claude doctor)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
