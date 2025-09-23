@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     subtitleElement.style.transition = 'opacity 0.5s ease-in';
     
     // 開始打字機效果
-    typeWriter(titleElement, '您專注，我紀錄', 80);
+    typeWriter(titleElement, '你專注，我紀錄', 80);
   }
   
   // 初始化影片點擊處理
