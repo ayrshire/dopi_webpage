@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dopi Note — 會議錄音，1分鐘變逐字稿</title>
-  <meta name="description" content="Dopi Note：AI 智慧錄音筆記，1分鐘完成逐字稿與重點整理。免登入、高隱私、支援20+語言。" />
-  <meta property="og:title" content="Dopi Note — 會議錄音，1分鐘變逐字稿" />
-  <meta property="og:description" content="AI 智慧摘要，讓每句話都有價值。免登入、高隱私、支援20+語言。" />
+  <title>Dopi Note — Meeting Recording, Transcription in 1 Minute</title>
+  <meta name="description" content="Dopi Note: AI smart recording notes, complete transcription and key point summary in 1 minute. No login required, high privacy, supports 20+ languages." />
+  <meta property="og:title" content="Dopi Note — Meeting Recording, Transcription in 1 Minute" />
+  <meta property="og:description" content="AI smart summary makes every word valuable. No login required, high privacy, supports 20+ languages." />
   <meta property="og:image" content="assets/appicon.png" />
   <link rel="icon" type="image/png" href="assets/appicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
+  <script defer src="i18n.js"></script>
 </head>
 <body>
   <!-- 導航列 -->
@@ -22,69 +23,53 @@
     <div class="nav-container">
       <div class="nav-brand">
         <img src="assets/appicon.png" alt="Dopi Note" class="nav-logo" />
-        <span>Dopi Note</span>
+        <span data-i18n="nav.brand">Dopi Note</span>
       </div>
       <div class="nav-actions">
-        <a href="#app-download" class="nav-cta">立即下載</a>
+        <a href="#app-download" class="nav-cta" data-i18n="nav.download">Download Now</a>
       </div>
     </div>
   </nav>
 
-  <!-- 產品展示 -->
-  <section class="section video-hero">
-    <div class="container">
-      <h1 class="hero-title" id="typewriter-title"></h1>
-      <p class="hero-subtitle">Dopi Note - 極速逐字稿、AI會議摘要</p>
-    </div>
-    <div class="video-container">
-      <iframe
-        src="https://www.youtube.com/embed/hTQGNA5pq7s?modestbranding=1&rel=0&fs=1&iv_load_policy=3&controls=0&showinfo=0&disablekb=1&autoplay=0"
-        title="Dopi Note 產品介紹影片"
-        frameborder="0"
-        loading="lazy"
-        tabindex="-1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-
-  <!-- 問題與解決方案 -->
-  <section class="section problem-solution">
-    <div class="container">
-      <div class="problem-solution-card">
-        <div class="problem-text">
-          <h2 class="problem-title">會議、演講、訪談中，總是分身乏術？</h2>
-          <p class="problem-subtitle">無法同時專心聆聽又完整記錄？</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- 適用場景 -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">你是否也有這些困擾？</h2>
+      <h2 class="section-title" data-i18n="useCases.title">Do you also face these challenges?</h2>
+      <p class="section-subtitle" data-i18n="problem.subtitle">Can't listen attentively while taking complete notes?</p>
       <div class="use-cases">
         <div class="use-card horizontal">
-          <img src="assets/usecase_meeting.png" alt="會議情境">
+          <iframe
+            src="https://www.youtube.com/embed/hTQGNA5pq7s?modestbranding=1&rel=0&fs=1&iv_load_policy=3&controls=1&showinfo=0"
+            title="Dopi Note - During Meetings"
+            frameborder="0"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
           <div class="use-content">
-            <h3>開會時</h3>
-            <p class="use-description">想專心參與討論，卻得分心做筆記</p>
+            <h3 data-i18n="useCases.meeting.title">During Meetings</h3>
+            <p class="use-description" data-i18n="useCases.meeting.description">Want to focus on discussions but have to take notes</p>
           </div>
         </div>
         <div class="use-card horizontal reverse">
           <img src="assets/usecase_client.png" alt="訪談情境">
           <div class="use-content">
-            <h3>訪談時</h3>
-            <p class="use-description">希望專注聆聽對方，但需完整記錄每句話</p>
+            <h3 data-i18n="useCases.interview.title">During Interviews</h3>
+            <p class="use-description" data-i18n="useCases.interview.description">Hope to listen attentively but need to record every word</p>
           </div>
         </div>
         <div class="use-card horizontal">
-          <img src="assets/usecase_speech.png" alt="演講情境">
+          <iframe
+            src="https://www.youtube.com/embed/Npi_ApjmWOg?modestbranding=1&rel=0&fs=1&iv_load_policy=3&controls=1&showinfo=0"
+            title="Dopi Note - During Lectures"
+            frameborder="0"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
           <div class="use-content">
-            <h3>聽演講時</h3>
-            <p class="use-description">非母語好難懂，語速快跟不上</p>
+            <h3 data-i18n="useCases.lecture.title">During Lectures</h3>
+            <p class="use-description" data-i18n="useCases.lecture.description">Non-native language is hard to understand, fast pace is hard to follow</p>
           </div>
         </div>
       </div>
@@ -94,29 +79,29 @@
   <!-- 功能特色 -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Dopi Note 來幫你</h2>
+      <h2 class="section-title" data-i18n="features.title">Dopi Note Is Here to Help</h2>
       <div class="features">
         <div class="feature-card feature-card-1">
-          <h3 class="feature-main-title">最強大的會議助理</h3>
+          <h3 class="feature-main-title" data-i18n="features.assistant.title">Most Powerful Meeting Assistant</h3>
           <ul class="feature-list">
-            <li>自動辨識多國語言，快速生成逐字稿</li>
-            <li>自動辨識場景，生成可溯源的摘要</li>
-            <li>自動將會議記錄翻譯成你的語言</li>
+            <li data-i18n="features.assistant.items.0">Automatically recognizes multiple languages, quickly generates transcripts</li>
+            <li data-i18n="features.assistant.items.1">Automatically identifies scenarios, generates traceable summaries</li>
+            <li data-i18n="features.assistant.items.2">Automatically translates meeting records to your language</li>
           </ul>
         </div>
         <div class="feature-card feature-card-2">
-          <h3 class="feature-main-title">最安全的資料管理</h3>
+          <h3 class="feature-main-title" data-i18n="features.security.title">Most Secure Data Management</h3>
           <ul class="feature-list">
-            <li>不強制登入，完全離線可用</li>
-            <li>登入後即啟用雲端同步，不用擔心資料遺失</li>
+            <li data-i18n="features.security.items.0">No forced login, completely offline available</li>
+            <li data-i18n="features.security.items.1">Cloud sync enabled after login, no worry about data loss</li>
           </ul>
         </div>
         <div class="feature-card feature-card-3">
-          <h3 class="feature-main-title">最彈性的付費機制</h3>
+          <h3 class="feature-main-title" data-i18n="features.pricing.title">Most Flexible Payment Model</h3>
           <ul class="feature-list">
-            <li>免訂閱，購買時數即可享有全功能</li>
-            <li>用多少買多少，超彈性</li>
-            <li>時數永不過期</li>
+            <li data-i18n="features.pricing.items.0">No subscription, purchase hours to enjoy full features</li>
+            <li data-i18n="features.pricing.items.1">Pay as you use, super flexible</li>
+            <li data-i18n="features.pricing.items.2">Hours never expire</li>
           </ul>
         </div>
       </div>
@@ -126,7 +111,8 @@
   <!-- 品牌標語 -->
   <section class="brand-slogan">
     <div class="container">
-      <h2 class="section-title">你專注，讓AI來記錄</h2>
+      <h2 class="section-title" data-i18n="slogan.title">You focus, let AI note</h2>
+      <p class="slogan-subtitle" data-i18n="slogan.subtitle">Dopi Note - The Ultimate Meeting Assistant</p>
     </div>
   </section>
 
@@ -134,12 +120,12 @@
   <section class="section" id="app-download">
     <div class="container">
       <div class="download-apps">
-        <h2 class="section-title">立即下載</h2>
+        <h2 class="section-title" data-i18n="download.title">Download Now</h2>
         <div class="app-badges">
-          <a href="#" class="app-badge" target="_blank">
+          <a href="#" class="app-badge app-store" target="_blank">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" />
           </a>
-          <a href="#" class="app-badge" target="_blank">
+          <a href="#" class="app-badge google-play" target="_blank">
             <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
           </a>
         </div>
@@ -151,8 +137,11 @@
   <section class="contact-bar">
     <div class="container">
       <div class="contact-info">
-        <span>聯絡我們：</span>
-        <a href="mailto:yijhen.yang@gmail.com">yijhen.yang@gmail.com</a>
+        <div>
+          <span data-i18n="contact.label">Contact Us:</span>
+          <a href="mailto:yijhen.yang@gmail.com" data-i18n="contact.email">yijhen.yang@gmail.com</a>
+        </div>
+        <!-- 語言切換器將由 JavaScript 動態插入此處 -->
       </div>
     </div>
   </section>
@@ -160,7 +149,7 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2025 Dopi Note. All rights reserved.</p>
+      <p data-i18n="footer.copyright">© 2025 Dopi Note. All rights reserved.</p>
     </div>
   </footer>
 </body>

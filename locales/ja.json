@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "Dopi Note — 会議録音、1分で文字起こし",
+    "description": "Dopi Note：AI スマート録音ノート、1分で文字起こしと要点整理を完了。ログイン不要、高プライバシー、20以上の言語をサポート。"
+  },
+  "og": {
+    "title": "Dopi Note — 会議録音、1分で文字起こし",
+    "description": "AI スマート要約で、すべての言葉に価値を。ログイン不要、高プライバシー、20以上の言語をサポート。"
+  },
+  "nav": {
+    "brand": "Dopi Note",
+    "download": "今すぐダウンロード"
+  },
+  "hero": {
+    "title": "あなたは集中、AIがノート",
+    "subtitle": "Dopi Note - 究極の会議アシスタント"
+  },
+  "problem": {
+    "title": "会議、講演、インタビューで同時進行が困難？",
+    "subtitle": "集中して聞きながら完全に記録することができない？"
+  },
+  "useCases": {
+    "title": "こんな悩みはありませんか？",
+    "meeting": {
+      "title": "会議中",
+      "description": "議論に集中したいのに、メモを取るのに気を取られる"
+    },
+    "interview": {
+      "title": "インタビュー中",
+      "description": "相手の話に集中したいが、すべての言葉を記録する必要がある"
+    },
+    "lecture": {
+      "title": "講演を聞く時",
+      "description": "母国語でないので理解が困難、話すスピードについていけない"
+    }
+  },
+  "features": {
+    "title": "Dopi Note がお手伝い",
+    "assistant": {
+      "title": "最強の会議アシスタント",
+      "items": [
+        "多言語を自動認識、素早く文字起こしを生成",
+        "シナリオを自動識別、トレース可能な要約を生成",
+        "会議記録を自動であなたの言語に翻訳"
+      ]
+    },
+    "security": {
+      "title": "最も安全なデータ管理",
+      "items": [
+        "ログイン強制なし、完全オフラインで使用可能",
+        "ログイン後はクラウド同期が有効、データ紛失の心配なし"
+      ]
+    },
+    "pricing": {
+      "title": "最も柔軟な料金体系",
+      "items": [
+        "サブスクリプション不要、時間を購入して全機能を享受",
+        "使った分だけ購入、超柔軟",
+        "時間は永続有効"
+      ]
+    }
+  },
+  "slogan": {
+    "title": "あなたは集中、AIがノート",
+    "subtitle": "Dopi Note - 究極の会議アシスタント"
+  },
+  "download": {
+    "title": "今すぐダウンロード"
+  },
+  "contact": {
+    "label": "お問い合わせ：",
+    "email": "yijhen.yang@gmail.com"
+  },
+  "footer": {
+    "copyright": "© 2025 Dopi Note. All rights reserved."
+  }
+}

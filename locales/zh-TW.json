@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "Dopi Note — 會議錄音，1分鐘變逐字稿",
+    "description": "Dopi Note：AI 智慧錄音筆記，1分鐘完成逐字稿與重點整理。免登入、高隱私、支援20+語言。"
+  },
+  "og": {
+    "title": "Dopi Note — 會議錄音，1分鐘變逐字稿",
+    "description": "AI 智慧摘要，讓每句話都有價值。免登入、高隱私、支援20+語言。"
+  },
+  "nav": {
+    "brand": "Dopi Note",
+    "download": "立即下載"
+  },
+  "hero": {
+    "title": "你專注，讓 AI 記錄",
+    "subtitle": "Dopi Note - 最強會議助理"
+  },
+  "problem": {
+    "title": "會議、演講、訪談中，總是分身乏術？",
+    "subtitle": "無法同時專心聆聽又完整記錄？"
+  },
+  "useCases": {
+    "title": "你是否也有這些困擾？",
+    "meeting": {
+      "title": "開會時",
+      "description": "想專心參與討論，卻得分心做筆記"
+    },
+    "interview": {
+      "title": "訪談時",
+      "description": "希望專注聆聽對方，但需完整記錄每句話"
+    },
+    "lecture": {
+      "title": "聽演講時",
+      "description": "非母語好難懂，語速快跟不上"
+    }
+  },
+  "features": {
+    "title": "Dopi Note 來幫你",
+    "assistant": {
+      "title": "最強大的會議助理",
+      "items": [
+        "自動辨識多國語言，快速生成逐字稿",
+        "自動辨識場景，生成可溯源的摘要",
+        "自動將會議記錄翻譯成你的語言"
+      ]
+    },
+    "security": {
+      "title": "最安全的資料管理",
+      "items": [
+        "不強制登入，完全離線可用",
+        "登入後即啟用雲端同步，不用擔心資料遺失"
+      ]
+    },
+    "pricing": {
+      "title": "最彈性的付費機制",
+      "items": [
+        "免訂閱，購買時數即可享有全功能",
+        "用多少買多少，超彈性",
+        "時數永不過期"
+      ]
+    }
+  },
+  "slogan": {
+    "title": "你專注，讓 AI 記錄",
+    "subtitle": "Dopi Note - 最強會議助理"
+  },
+  "download": {
+    "title": "立即下載"
+  },
+  "contact": {
+    "label": "聯絡我們：",
+    "email": "yijhen.yang@gmail.com"
+  },
+  "footer": {
+    "copyright": "© 2025 Dopi Note. All rights reserved."
+  }
+}

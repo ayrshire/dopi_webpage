@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "Dopi Note — Grabación de reuniones, transcripción en 1 minuto",
+    "description": "Dopi Note: Notas de grabación inteligente AI, transcripción completa y resumen de puntos clave en 1 minuto. Sin inicio de sesión requerido, alta privacidad, soporta más de 20 idiomas."
+  },
+  "og": {
+    "title": "Dopi Note — Grabación de reuniones, transcripción en 1 minuto",
+    "description": "Resumen inteligente AI hace que cada palabra sea valiosa. Sin inicio de sesión requerido, alta privacidad, soporta más de 20 idiomas."
+  },
+  "nav": {
+    "brand": "Dopi Note",
+    "download": "Descargar Ahora"
+  },
+  "hero": {
+    "title": "Tú te enfocas, deja que la IA tome notas",
+    "subtitle": "Dopi Note - El Mejor Asistente de Reuniones"
+  },
+  "problem": {
+    "title": "¿Luchas para hacer varias tareas durante reuniones, conferencias y entrevistas?",
+    "subtitle": "¿No puedes escuchar atentamente mientras tomas notas completas?"
+  },
+  "useCases": {
+    "title": "¿También enfrentas estos desafíos?",
+    "meeting": {
+      "title": "Durante Reuniones",
+      "description": "Quiero concentrarme en las discusiones pero tengo que tomar notas"
+    },
+    "interview": {
+      "title": "Durante Entrevistas",
+      "description": "Espero escuchar atentamente pero necesito grabar cada palabra"
+    },
+    "lecture": {
+      "title": "Durante Conferencias",
+      "description": "El idioma no nativo es difícil de entender, el ritmo rápido es difícil de seguir"
+    }
+  },
+  "features": {
+    "title": "Dopi Note Está Aquí Para Ayudar",
+    "assistant": {
+      "title": "Asistente de Reuniones Más Poderoso",
+      "items": [
+        "Reconoce automáticamente múltiples idiomas, genera transcripciones rápidamente",
+        "Identifica automáticamente escenarios, genera resúmenes trazables",
+        "Traduce automáticamente los registros de reuniones a tu idioma"
+      ]
+    },
+    "security": {
+      "title": "Gestión de Datos Más Segura",
+      "items": [
+        "Sin inicio de sesión forzado, completamente disponible sin conexión",
+        "Sincronización en la nube habilitada después del inicio de sesión, sin preocupación por pérdida de datos"
+      ]
+    },
+    "pricing": {
+      "title": "Modelo de Pago Más Flexible",
+      "items": [
+        "Sin suscripción, compra horas para disfrutar de todas las características",
+        "Paga según uses, súper flexible",
+        "Las horas nunca expiran"
+      ]
+    }
+  },
+  "slogan": {
+    "title": "Tú te enfocas, deja que la IA tome notas",
+    "subtitle": "Dopi Note - El Mejor Asistente de Reuniones"
+  },
+  "download": {
+    "title": "Descargar Ahora"
+  },
+  "contact": {
+    "label": "Contáctanos:",
+    "email": "yijhen.yang@gmail.com"
+  },
+  "footer": {
+    "copyright": "© 2025 Dopi Note. All rights reserved."
+  }
+}

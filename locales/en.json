@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "Dopi Note — Meeting Recording, Transcription in 1 Minute",
+    "description": "Dopi Note: AI smart recording notes, complete transcription and key point summary in 1 minute. No login required, high privacy, supports 20+ languages."
+  },
+  "og": {
+    "title": "Dopi Note — Meeting Recording, Transcription in 1 Minute",
+    "description": "AI smart summary makes every word valuable. No login required, high privacy, supports 20+ languages."
+  },
+  "nav": {
+    "brand": "Dopi Note",
+    "download": "Download Now"
+  },
+  "hero": {
+    "title": "You Focus, let AI note",
+    "subtitle": "Dopi Note - The Ultimate Meeting Assistant"
+  },
+  "problem": {
+    "title": "Struggling to multitask during meetings, lectures, and interviews?",
+    "subtitle": "Can't listen attentively while taking complete notes?"
+  },
+  "useCases": {
+    "title": "Do you also face these challenges?",
+    "meeting": {
+      "title": "During Meetings",
+      "description": "Want to focus on discussions but have to take notes"
+    },
+    "interview": {
+      "title": "During Interviews",
+      "description": "Hope to listen attentively but need to record every word"
+    },
+    "lecture": {
+      "title": "During Lectures",
+      "description": "Non-native language is hard to understand, fast pace is hard to follow"
+    }
+  },
+  "features": {
+    "title": "Dopi Note Is Here to Help",
+    "assistant": {
+      "title": "Most Powerful Meeting Assistant",
+      "items": [
+        "Automatically recognizes multiple languages, quickly generates transcripts",
+        "Automatically identifies scenarios, generates traceable summaries",
+        "Automatically translates meeting records to your language"
+      ]
+    },
+    "security": {
+      "title": "Most Secure Data Management",
+      "items": [
+        "No forced login, completely offline available",
+        "Cloud sync enabled after login, no worry about data loss"
+      ]
+    },
+    "pricing": {
+      "title": "Most Flexible Payment Model",
+      "items": [
+        "No subscription, purchase hours to enjoy full features",
+        "Pay as you use, super flexible",
+        "Hours never expire"
+      ]
+    }
+  },
+  "slogan": {
+    "title": "You focus, let AI note",
+    "subtitle": "Dopi Note - The Ultimate Meeting Assistant"
+  },
+  "download": {
+    "title": "Download Now"
+  },
+  "contact": {
+    "label": "Contact Us:",
+    "email": "yijhen.yang@gmail.com"
+  },
+  "footer": {
+    "copyright": "© 2025 Dopi Note. All rights reserved."
+  }
+}
