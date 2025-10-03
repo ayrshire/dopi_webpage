@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
   <script defer src="i18n.js"></script>
 </head>
 <body>
@@ -35,7 +34,6 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title" data-i18n="useCases.title">Do you also face these challenges?</h2>
-      <p class="section-subtitle" data-i18n="problem.subtitle">Can't listen attentively while taking complete notes?</p>
       <div class="use-cases">
         <div class="use-card horizontal">
           <iframe
@@ -112,7 +110,6 @@
   <section class="brand-slogan">
     <div class="container">
       <h2 class="section-title" data-i18n="slogan.title">You focus, let AI note</h2>
-      <p class="slogan-subtitle" data-i18n="slogan.subtitle">Dopi Note - The Ultimate Meeting Assistant</p>
     </div>
   </section>
 
@@ -120,7 +117,7 @@
   <section class="section" id="app-download">
     <div class="container">
       <div class="download-apps">
-        <h2 class="section-title" data-i18n="download.title">Download Now</h2>
+        <h2 class="section-title download-title" data-i18n="download.title">Download Now</h2>
         <div class="app-badges">
           <a href="#" class="app-badge app-store" target="_blank">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" />
@@ -137,9 +134,14 @@
   <section class="contact-bar">
     <div class="container">
       <div class="contact-info">
-        <div>
+        <div class="contact-email">
           <span data-i18n="contact.label">Contact Us:</span>
-          <a href="mailto:yijhen.yang@gmail.com" data-i18n="contact.email">yijhen.yang@gmail.com</a>
+          <a href="mailto:yijhen.yang@gmail.com" class="email-link" title="yijhen.yang@gmail.com" aria-label="Send email to yijhen.yang@gmail.com">
+            <svg class="email-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M22 7l-10 7L2 7" />
+            </svg>
+          </a>
         </div>
         <!-- 語言切換器將由 JavaScript 動態插入此處 -->
       </div>
