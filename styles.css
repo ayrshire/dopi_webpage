@@ -472,6 +472,85 @@ a:hover { color: var(--brand-hover); }
 }
 
 /* ==========================================================================
+   11.5. FAQ 區塊
+   ========================================================================== */
+.faq-section {
+  background: var(--section);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.faq-item {
+  background: transparent;
+  border: 1px solid rgba(145, 168, 208, 0.2);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow);
+}
+
+.faq-item summary {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  user-select: none;
+  background: rgba(145, 168, 208, 0.18);    /* 莫蘭迪藍灰 */
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: var(--text-xl);
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+.faq-item p {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  font-size: var(--text-lg);
+  color: var(--text-light);
+  line-height: 1.7;
+  white-space: pre-line;
+  background: rgba(176, 196, 177, 0.18);    /* 莫蘭迪淺綠 */
+}
+
+@media (max-width: 640px) {
+  .faq-item summary {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--text-lg);
+  }
+
+  .faq-item p {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--text-base);
+  }
+}
+
+/* ==========================================================================
    12. 下載區塊
    ========================================================================== */
 .download-apps {
