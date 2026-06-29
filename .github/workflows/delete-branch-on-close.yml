@@ -1,0 +1,34 @@
+# 自動刪除「被關閉但未合併」(reject) 的 PR 分支。
+#
+# 背景:repo 已設定 delete_branch_on_merge=true,所以「merge 後」分支會自動刪;
+# 但 GitHub 那個設定「只在 merge 時」觸發,reject(close 不 merge) 不會刪分支。
+# 這支 workflow 補上 reject 這個缺口。
+#
+# 安全範圍:只刪橘色魚自動建立的 oft/* 分支,不碰 main/master、不碰人工分支、不碰 fork。
+# 若要擴大到「所有未合併關閉的 PR 分支」,把下方 if 的 startsWith(... 'oft/') 那段移除即可。
+name: Delete branch on unmerged PR close
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  delete-oft-branch:
+    if: ${{ github.event.pull_request.merged == false && startsWith(github.event.pull_request.head.ref, 'oft/') && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Delete head branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          REPO: ${{ github.repository }}
+          PR_NUM: ${{ github.event.pull_request.number }}
+        run: |
+          echo "PR #${PR_NUM} 已關閉但未合併 → 刪除分支: ${HEAD_REF}"
+          if gh api -X DELETE "repos/${REPO}/git/refs/heads/${HEAD_REF}" >/dev/null 2>&1; then
+            echo "✅ 已刪除分支 ${HEAD_REF}"
+          else
+            echo "ℹ️ 分支可能已不存在或無法刪除,略過"
+          fi
