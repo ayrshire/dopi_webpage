@@ -72,6 +72,6 @@
     "email": "yijhen.yang@gmail.com"
   },
   "footer": {
-    "copyright": "© 2025 Dopi Note. All rights reserved."
+    "copyright": "© {year} Dopi Note. All rights reserved."
   }
 }

@@ -139,7 +139,10 @@ class I18n {
             element.innerHTML = text.replace(' - ', '<br>- ');
           } else {
             // {year} 佔位符 → 當前年份(footer 版權動態年份;每次切語言重跑也維持正確)
-            element.textContent = text.replace('{year}', new Date().getFullYear());
+            // getText 可能回傳非字串(例如 key 指到陣列/物件),先判型再 replace,避免整個 i18n 迴圈被 TypeError 中斷
+            element.textContent = typeof text === 'string'
+              ? text.replace('{year}', new Date().getFullYear())
+              : text;
           }
         }
       }
