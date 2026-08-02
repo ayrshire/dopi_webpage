@@ -347,6 +347,18 @@ a:hover { color: var(--brand-hover); }
   flex-direction: row-reverse;
 }
 
+/* <picture> 僅作為 WebP/JPEG 來源切換的容器，不參與版面：
+   讓內部 <img> 直接成為 .use-card.horizontal 的 flex 子項，維持原有尺寸規則。
+   注意：display:contents 會讓 <source> 也升格為 flex 子項而多吃一個 gap，
+   故一併隱藏（不影響瀏覽器挑選 WebP/JPEG 來源） */
+.use-card.horizontal picture {
+  display: contents;
+}
+
+.use-card.horizontal picture source {
+  display: none;
+}
+
 .use-card.horizontal img,
 .use-card.horizontal iframe {
   inline-size: clamp(320px, 42vw, 520px);
