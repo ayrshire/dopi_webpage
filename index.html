@@ -357,13 +357,47 @@
     </div>
   </footer>
   <!-- 行動裝置的下載徽章改走 OneLink 做安裝歸因（pid=website）；
-       桌機維持直連商店，因為 OneLink 在桌機會導回本站形成迴圈 -->
+       桌機維持直連商店，因為 OneLink 在桌機會導回本站形成迴圈。
+
+       徽章的 href 永遠保持商店直連，不在載入時改寫 —— href 是三種情況下唯一的退路：
+       JS 沒跑成、追蹤網域被攔截（uBlock／AdGuard／Pi-hole／電信 DNS）、使用者長按複製連結。
+       做法是先探測 onelink.me 通不通（1200ms 逾時即放棄），只有探測成功才在 click 當下
+       把 href 升級成 OneLink、導航啟動後立刻還原。探測失敗＝點擊走原生導航直上商店。
+       刻意的取捨：載入後 1200ms 內就點下去的用戶會拿到商店直連、少一次歸因 ——
+       寧可掉歸因，不可掉下載。 -->
   <script>
     (function () {
       if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) return;
+      // 老瀏覽器缺 fetch／AbortController：直接維持商店直連（掉歸因、下載正常）
+      if (typeof fetch !== 'function' || typeof AbortController !== 'function') return;
+
       var base = 'https://dopinote.onelink.me/O4KK?pid=website&c=';
+      var reachable = false;
+
+      // 探測用的是無害的靜態路徑，不是 O4KK 點擊端點 —— 避免灌水點擊數與錯誤歸因。
+      // no-cors 下拿到的是 opaque response，404 也算 resolve，我們只要知道「網域通不通」。
+      var controller = new AbortController();
+      var abortTimer = setTimeout(function () { controller.abort(); }, 1200);
+      fetch('https://dopinote.onelink.me/favicon.ico', {
+        mode: 'no-cors',
+        cache: 'no-store',
+        signal: controller.signal
+      }).then(function () {
+        clearTimeout(abortTimer);
+        reachable = true;
+      }).catch(function () {
+        clearTimeout(abortTimer);
+        // 被攔截或逾時 → reachable 維持 false → 保持商店直連
+      });
+
       document.querySelectorAll('a.app-badge').forEach(function (a) {
-        a.href = base + (a.classList.contains('app-store') ? 'appstore_badge' : 'googleplay_badge');
+        var storeUrl = a.href;
+        a.addEventListener('click', function () {
+          if (!reachable) return; // 原生導航 → 商店直連
+          a.href = base + (a.classList.contains('app-store') ? 'appstore_badge' : 'googleplay_badge');
+          // 導航的預設動作在所有 listener 跑完後才取 href，macrotask 一定排在它後面
+          setTimeout(function () { a.href = storeUrl; }, 0);
+        });
       });
     })();
   </script>
