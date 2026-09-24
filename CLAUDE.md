@@ -77,7 +77,6 @@ npx serve .
 
 ## 注意事項
 
-- 專案目前缺少 `.gitignore` 檔案
 - `locales/*.json` 與 `i18n.js` 內的 `LANGUAGE_DATA` 可能不同步，以 `LANGUAGE_DATA` 為準
 - 使用場景卡片有兩種媒體：YouTube `<iframe>` 嵌入和靜態 `<img>`，新增時注意選擇
 - CSS 中存在未使用的區塊（如 `.video-hero`、`.problem-solution`），這些是保留樣式，目前 HTML 中未使用
