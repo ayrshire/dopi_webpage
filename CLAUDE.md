@@ -80,4 +80,5 @@ npx serve .
 - 使用場景卡片有兩種媒體：YouTube `<iframe>` 嵌入和靜態 `<img>`，新增時注意選擇
 - CSS 中 `.problem-solution` 區塊目前 HTML 未使用，是保留樣式
 - `assets/appicon.png` 是 1024px 原始圖，僅作素材來源，頁面不引用；頁面用 `logo.png`（128px）、`apple-touch-icon.png`（180px）、`og-image.png`（1200×630，用 PIL 從 appicon 合成）
+- `googlee26b5176309ad42d.html` 是 Google Search Console 的擁有權驗證檔（網址前置字元資源 `https://www.dopinote.com/`，2026-11-10 驗證、sitemap 已提交），**不可刪除**
 - SEO：單一 URL 無法對爬蟲提供多語言內容，靜態 HTML 的文案與 meta 以英文為準，JS 只在瀏覽器端切換；hreflang 已移除（同一 URL 多個 hreflang 無效）
