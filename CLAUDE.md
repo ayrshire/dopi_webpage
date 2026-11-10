@@ -78,7 +78,7 @@ npx serve .
 
 ## 注意事項
 
-- **評分數字是手動維護**：hero 的「4.9 App Store 評分」「1,000+ 次下載」與 JSON-LD 的 `aggregateRating`（2026-11-10：App Store 台灣 4.92／25 則評分；Google Play 評分數不足未顯示、1,000+ 次下載）。查法：`https://itunes.apple.com/lookup?id=6677020892&country=tw`；評論：`https://itunes.apple.com/tw/rss/customerreviews/id=6677020892/json`
+- **評分數字是手動維護**：hero 的「4.9 App Store 評分」「10,000+ 次下載（雙平台合計，用戶提供；Google Play 公開頁只顯示 1,000+）」與 JSON-LD 的 `aggregateRating`（2026-11-10：App Store 台灣 4.92／25 則評分；Google Play 評分數不足未顯示、1,000+ 次下載）。查法：`https://itunes.apple.com/lookup?id=6677020892&country=tw`；評論：`https://itunes.apple.com/tw/rss/customerreviews/id=6677020892/json`
 
 - 使用場景卡片有兩種媒體：YouTube `<iframe>` 嵌入和靜態 `<img>`，新增時注意選擇
 - CSS 中 `.problem-solution` 區塊目前 HTML 未使用，是保留樣式
