@@ -24,9 +24,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="preload" href="styles.css?v=8" as="style" />
-  <link rel="stylesheet" href="styles.css?v=8" />
-  <script defer src="i18n.js?v=8"></script>
+  <link rel="preload" href="styles.css?v=9" as="style" />
+  <link rel="stylesheet" href="styles.css?v=9" />
+  <script defer src="i18n.js?v=9"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +46,13 @@
       "https://apps.apple.com/app/id6677020892",
       "https://play.google.com/store/apps/details?id=com.orangefish.transcriber"
     ],
-    "inLanguage": "zh-TW"
+    "inLanguage": "zh-TW",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "25",
+      "bestRating": "5"
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -172,9 +178,10 @@
   <!-- Hero：一句話定位 + 下載 -->
   <header class="hero">
     <div class="container">
-      <h1 class="hero-title" data-i18n="hero.title">錄音結束，1 分鐘拿到完整會議紀錄</h1>
-      <p class="hero-subtitle" data-i18n="hero.subtitle">免登入、免訂閱，錄音只留在你的手機</p>
-      <div class="app-badges">
+      <div class="hero-copy">
+        <h1 class="hero-title" data-i18n="hero.title">錄音結束，1 分鐘拿到完整會議紀錄</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">免登入、免訂閱，錄音只留在你的手機</p>
+        <div class="app-badges">
         <a href="https://apps.apple.com/app/id6677020892" class="app-badge app-store" target="_blank" rel="noopener noreferrer">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="在 App Store 下載" data-i18n-alt="alt.appStore" width="120" height="40" />
         </a>
@@ -182,7 +189,19 @@
           <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="在 Google Play 下載" data-i18n-alt="alt.googlePlay" width="564" height="168" />
         </a>
       </div>
-      <p class="hero-note" data-i18n="hero.note">下載即贈 3 小時</p>
+        <p class="hero-note" data-i18n="hero.note">下載即贈 3 小時</p>
+        <p class="hero-proof">
+          <span class="proof-item"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 <span data-i18n="hero.ratingLabel">App Store 評分</span></span>
+          <span class="proof-sep" aria-hidden="true">·</span>
+          <span class="proof-item">1,000+ <span data-i18n="hero.downloadsLabel">次下載（Google Play）</span></span>
+        </p>
+      </div>
+      <div class="hero-shot">
+        <picture>
+          <source srcset="assets/hero-summary.webp" type="image/webp">
+          <img src="assets/hero-summary.jpg" alt="Dopi Note 會議紀錄摘要畫面" data-i18n-alt="alt.heroShot" width="720" height="1179" fetchpriority="high">
+        </picture>
+      </div>
     </div>
   </header>
 
@@ -269,6 +288,43 @@
             <li data-i18n="features.formats.items.1">也可以自訂你的樣板</li>
             <li data-i18n="features.formats.items.2">匯出 Word、PDF、純文字，一鍵分享</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用戶推薦：YouTuber 實測＋App Store 評論 -->
+  <section class="section social-section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="social.title">用過的人怎麼說</h2>
+      <div class="social-grid">
+        <div class="social-video">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/jBdn6qpNiI4?start=162&rel=0&modestbranding=1"
+              title="超神AI會議記錄工具，掌握細節轉譯精確，中途可以暫停再繼續超方便｜支援粵語 feat. DopiNote"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="social-video-label" data-i18n="social.videoLabel">YouTuber 大有牧森 Austin Chou 實測</p>
+          <p class="social-video-caption">超神AI會議記錄工具，掌握細節轉譯精確，中途可以暫停再繼續超方便｜支援粵語</p>
+        </div>
+        <div class="review-list">
+          <blockquote class="review-card">
+            <p class="review-stars" aria-label="5/5">★★★★★</p>
+            <p class="review-title" data-i18n="social.r1.title">紀錄產出的架構很優秀</p>
+            <p class="review-body" data-i18n="social.r1.body">會議記錄架構優秀，除了能依據內容正確產出紀錄之外，亦能歸納重點並以條列式呈現，節省很多時間，對上班族來說相當實用。</p>
+            <footer class="review-author">— <span data-i18n="social.r1.author">5年使用者</span></footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p class="review-stars" aria-label="5/5">★★★★★</p>
+            <p class="review-title" data-i18n="social.r2.title">實用 AI 即時紀錄</p>
+            <p class="review-body" data-i18n="social.r2.body">隨意聊天內容也能完整記錄並節錄重點，檢查重點後發現也很貼近聊天的主題。</p>
+            <footer class="review-author">— <span data-i18n="social.r2.author">SuYSin</span></footer>
+          </blockquote>
+          <p class="review-source" data-i18n="social.source">來自 App Store 台灣的公開評論</p>
         </div>
       </div>
     </div>

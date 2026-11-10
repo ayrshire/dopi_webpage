@@ -61,7 +61,8 @@ npx serve .
 | 區塊 | HTML 結構 | 關鍵 class |
 |------|-----------|-----------|
 | 導航列 | `<nav class="navbar">` | `.nav-container`, `.nav-brand`, `.nav-cta` |
-| Hero | `<header class="hero">` | `.hero-title`（全頁唯一 h1）, `.hero-subtitle`, `.app-badges`, `.hero-note` |
+| Hero | `<header class="hero">` | 兩欄：`.hero-copy`（h1、`.hero-subtitle`、`.app-badges`、`.hero-note`、`.hero-proof` 評分列）＋ `.hero-shot`（`assets/hero-summary.webp`，裁自 App Store 商店截圖第 1 張） |
+| 用戶推薦 | `<section class="social-section">` | `.social-grid`：`.video-frame`（YouTuber 實測 jBdn6qpNiI4，start=162）＋ `.review-card`×2（App Store 台灣公開評論，四語言翻譯） |
 | 使用場景 | `<section class="section">` | `.use-cases`, `.use-card.horizontal` |
 | 功能特色 | `<section class="section">` | `.features`, `.feature-card`, `.feature-card-1/2/3` |
 | 應用下載（含品牌標語） | `<section id="app-download">` | `.download-apps`, `.download-subtitle`, `.app-badges` |
@@ -76,6 +77,8 @@ npx serve .
 - 修改頁面內容時同步更新 SEO 相關標籤（透過 i18n 的 `meta` 和 `og` key）
 
 ## 注意事項
+
+- **評分數字是手動維護**：hero 的「4.9 App Store 評分」「1,000+ 次下載」與 JSON-LD 的 `aggregateRating`（2026-11-10：App Store 台灣 4.92／25 則評分；Google Play 評分數不足未顯示、1,000+ 次下載）。查法：`https://itunes.apple.com/lookup?id=6677020892&country=tw`；評論：`https://itunes.apple.com/tw/rss/customerreviews/id=6677020892/json`
 
 - 使用場景卡片有兩種媒體：YouTube `<iframe>` 嵌入和靜態 `<img>`，新增時注意選擇
 - CSS 中 `.problem-solution` 區塊目前 HTML 未使用，是保留樣式
