@@ -399,8 +399,8 @@ a:hover { color: var(--brand-hover); }
    ========================================================================== */
 .features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
   max-width: var(--container-width);
   margin: 0 auto;
 }
@@ -414,7 +414,8 @@ a:hover { color: var(--brand-hover); }
 }
 
 .feature-main-title {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
+  font-weight: 500;
   font-weight: 400;
   margin-bottom: var(--spacing-sm);
   color: var(--text);
@@ -468,6 +469,13 @@ a:hover { color: var(--brand-hover); }
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-color: rgba(216, 191, 185, 0.2);
+}
+
+.feature-card-4 {
+  background: rgba(226, 208, 160, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: rgba(226, 208, 160, 0.2);
 }
 
 /* ==========================================================================
@@ -749,6 +757,10 @@ footer p {
 
 /* 手機橫向 (640px以下) */
 @media (max-width: 640px) {
+  .hero .hero-title {
+    font-size: var(--text-2xl);
+  }
+
   /* 導航列優化 */
   .nav-container {
     padding: 0 var(--spacing-md);

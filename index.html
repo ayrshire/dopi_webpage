@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dopi Note — 會議錄音，1分鐘變逐字稿</title>
-  <meta name="description" content="Dopi Note：AI 智慧錄音筆記，1分鐘完成逐字稿與重點整理。免登入、高隱私、支援20+語言。" />
-  <meta property="og:title" content="Dopi Note — 會議錄音，1分鐘變逐字稿" />
-  <meta property="og:description" content="AI 智慧摘要，讓每句話都有價值。免登入、高隱私、支援20+語言。" />
+  <title>Dopi Note — AI 會議紀錄 App，1 分鐘出摘要，免登入免訂閱</title>
+  <meta name="description" content="AI 會議紀錄 App：錄音結束 1 分鐘內產出逐字稿與摘要。免登入、免訂閱，錄音只存在你的手機。支援 20+ 語言、多種摘要樣板，可匯出 Word、PDF。下載即贈 3 小時。" />
+  <meta property="og:title" content="Dopi Note — AI 會議紀錄 App，1 分鐘出摘要，免登入免訂閱" />
+  <meta property="og:description" content="錄音結束 1 分鐘拿到逐字稿與摘要。免登入、免訂閱，錄音只留在你的手機。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.dopinote.com/" />
   <meta property="og:site_name" content="Dopi Note" />
@@ -24,9 +24,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="preload" href="styles.css?v=7" as="style" />
-  <link rel="stylesheet" href="styles.css?v=7" />
-  <script defer src="i18n.js?v=7"></script>
+  <link rel="preload" href="styles.css?v=8" as="style" />
+  <link rel="stylesheet" href="styles.css?v=8" />
+  <script defer src="i18n.js?v=8"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,7 +39,7 @@
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "Dopi Note：AI 智慧錄音筆記，1分鐘完成逐字稿與重點整理。免登入、高隱私、支援20+語言。",
+    "description": "AI 會議紀錄 App：錄音結束 1 分鐘內產出逐字稿與摘要。免登入、免訂閱，錄音只存在你的手機。支援 20+ 語言、多種摘要樣板，可匯出 Word、PDF。下載即贈 3 小時。",
     "url": "https://www.dopinote.com",
     "image": "https://www.dopinote.com/assets/og-image.png",
     "installUrl": [
@@ -59,7 +59,7 @@
         "name": "Dopi Note 是什麼？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Dopi Note 是一款 AI 會議助理 App，1 分鐘即可生成逐字稿與摘要。獨家支援名詞修正與超靈活的摘要格式，iOS 與 Android 平台皆可使用。"
+          "text": "Dopi Note 是一款 AI 會議紀錄 App，錄音結束 1 分鐘內產出逐字稿與摘要。免登入、免訂閱，錄音只存在你的手機；支援多種摘要樣板與輸出格式，iOS 與 Android 皆可用。"
         }
       },
       {
@@ -172,8 +172,8 @@
   <!-- Hero：一句話定位 + 下載 -->
   <header class="hero">
     <div class="container">
-      <h1 class="hero-title" data-i18n="hero.title">會議錄音，1 分鐘變逐字稿與摘要</h1>
-      <p class="hero-subtitle" data-i18n="hero.subtitle">自動辨識 20+ 語言、錄音不離機、免訂閱</p>
+      <h1 class="hero-title" data-i18n="hero.title">錄音結束，1 分鐘拿到完整會議紀錄</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">免登入、免訂閱，錄音只留在你的手機</p>
       <div class="app-badges">
         <a href="https://apps.apple.com/app/id6677020892" class="app-badge app-store" target="_blank" rel="noopener noreferrer">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="在 App Store 下載" data-i18n-alt="alt.appStore" width="120" height="40" />
@@ -239,26 +239,35 @@
       <h2 class="section-title" data-i18n="features.title">Dopi Note 來幫你</h2>
       <div class="features">
         <div class="feature-card feature-card-1">
-          <h3 class="feature-main-title" data-i18n="features.assistant.title">1 分鐘產出逐字稿與摘要</h3>
+          <h3 class="feature-main-title" data-i18n="features.assistant.title">1 分鐘出完整紀錄</h3>
           <ul class="feature-list">
-            <li data-i18n="features.assistant.items.0">自動辨識多國語言，快速生成逐字稿</li>
-            <li data-i18n="features.assistant.items.1">自動辨識場景，生成可溯源的摘要</li>
-            <li data-i18n="features.assistant.items.2">自動將會議記錄翻譯成你的語言</li>
+            <li data-i18n="features.assistant.items.0">錄完立刻有逐字稿與重點摘要</li>
+            <li data-i18n="features.assistant.items.1">自動辨識 20+ 語言，外語會議也能懂</li>
+            <li data-i18n="features.assistant.items.2">摘要自動翻成你的語言</li>
           </ul>
         </div>
         <div class="feature-card feature-card-2">
-          <h3 class="feature-main-title" data-i18n="features.security.title">原始錄音只存在你的手機</h3>
+          <h3 class="feature-main-title" data-i18n="features.security.title">免登入，資料只在你手機</h3>
           <ul class="feature-list">
-            <li data-i18n="features.security.items.0">登入可享雲端同步，不用擔心資料遺失</li>
-            <li data-i18n="features.security.items.1">選擇本機模式，資料只存在手機</li>
+            <li data-i18n="features.security.items.0">打開就能錄，不用註冊帳號</li>
+            <li data-i18n="features.security.items.1">錄音與紀錄存在本機，不上傳</li>
+            <li data-i18n="features.security.items.2">想跨裝置用，再登入同步就好</li>
           </ul>
         </div>
         <div class="feature-card feature-card-3">
-          <h3 class="feature-main-title" data-i18n="features.pricing.title">免訂閱，時數永不過期</h3>
+          <h3 class="feature-main-title" data-i18n="features.pricing.title">免訂閱，按時數買</h3>
           <ul class="feature-list">
-            <li data-i18n="features.pricing.items.0">免訂閱，購買時數即可享有全功能</li>
-            <li data-i18n="features.pricing.items.1">用多少買多少，超彈性</li>
-            <li data-i18n="features.pricing.items.2">時數永不過期</li>
+            <li data-i18n="features.pricing.items.0">下載即贈 3 小時</li>
+            <li data-i18n="features.pricing.items.1">用多少買多少，時數永不過期</li>
+            <li data-i18n="features.pricing.items.2">不分方案，全功能都能用</li>
+          </ul>
+        </div>
+        <div class="feature-card feature-card-4">
+          <h3 class="feature-main-title" data-i18n="features.formats.title">一份錄音，多種版本</h3>
+          <ul class="feature-list">
+            <li data-i18n="features.formats.items.0">精簡、詳細、條列、行動項目隨你選</li>
+            <li data-i18n="features.formats.items.1">也可以自訂你的樣板</li>
+            <li data-i18n="features.formats.items.2">匯出 Word、PDF、純文字，一鍵分享</li>
           </ul>
         </div>
       </div>
@@ -272,7 +281,7 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary data-i18n="faq.q1.q">Dopi Note 是什麼？</summary>
-          <p data-i18n="faq.q1.a">Dopi Note 是一款 AI 會議助理 App，1 分鐘即可生成逐字稿與摘要。獨家支援名詞修正與超靈活的摘要格式，iOS 與 Android 平台皆可使用。</p>
+          <p data-i18n="faq.q1.a">Dopi Note 是一款 AI 會議紀錄 App，錄音結束 1 分鐘內產出逐字稿與摘要。免登入、免訂閱，錄音只存在你的手機；支援多種摘要樣板與輸出格式，iOS 與 Android 皆可用。</p>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q2.q">我的錄音和筆記安全嗎？</summary>
