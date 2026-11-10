@@ -28,14 +28,13 @@ npx serve .
 | `index.html` | 唯一頁面，所有區塊都在此檔案 |
 | `styles.css` | 唯一樣式表，使用 CSS 變數系統 (`:root`) |
 | `i18n.js` | 國際化系統 — **翻譯資料直接嵌入此檔案的 `LANGUAGE_DATA` 物件** |
-| `locales/*.json` | 翻譯參考檔（目前未被載入，實際運行時不使用） |
 | `assets/` | 圖片、App icon 等靜態資源 |
 
 ### 國際化 (i18n) 架構
 
 這是本專案最需要理解的系統：
 
-1. **翻譯資料來源**: `i18n.js` 頂部的 `LANGUAGE_DATA` 常數（不是 `locales/` 目錄的 JSON 檔案）
+1. **翻譯資料來源**: `i18n.js` 頂部的 `LANGUAGE_DATA` 常數（每種語言一行 JSON，改動時用腳本解析後重寫最安全）
 2. **I18n 類別** (`i18n.js`): 管理語言偵測、切換、DOM 更新
    - `detectLanguage()`: localStorage → 瀏覽器語言 → 預設 `en`
    - `updateContent()`: 掃描所有 `[data-i18n]` 元素並更新文字
@@ -62,11 +61,12 @@ npx serve .
 | 區塊 | HTML 結構 | 關鍵 class |
 |------|-----------|-----------|
 | 導航列 | `<nav class="navbar">` | `.nav-container`, `.nav-brand`, `.nav-cta` |
+| Hero | `<header class="hero">` | `.hero-title`（全頁唯一 h1）, `.hero-subtitle`, `.app-badges`, `.hero-note` |
 | 使用場景 | `<section class="section">` | `.use-cases`, `.use-card.horizontal` |
 | 功能特色 | `<section class="section">` | `.features`, `.feature-card`, `.feature-card-1/2/3` |
-| 品牌標語 | `<section class="brand-slogan">` | `.section-title` |
-| 應用下載 | `<section id="app-download">` | `.download-apps`, `.app-badges` |
+| 應用下載（含品牌標語） | `<section id="app-download">` | `.download-apps`, `.download-subtitle`, `.app-badges` |
 | 聯絡/語言切換 | `<section class="contact-bar">` | `.contact-info`（語言切換器由 JS 動態插入） |
+| Footer | `<footer>` | `.footer-links`（隱私政策／服務條款連到 Notion 公開頁，與 App 內相同網址） |
 
 ## 開發規範
 
@@ -77,6 +77,7 @@ npx serve .
 
 ## 注意事項
 
-- `locales/*.json` 與 `i18n.js` 內的 `LANGUAGE_DATA` 可能不同步，以 `LANGUAGE_DATA` 為準
 - 使用場景卡片有兩種媒體：YouTube `<iframe>` 嵌入和靜態 `<img>`，新增時注意選擇
-- CSS 中存在未使用的區塊（如 `.video-hero`、`.problem-solution`），這些是保留樣式，目前 HTML 中未使用
+- CSS 中 `.problem-solution` 區塊目前 HTML 未使用，是保留樣式
+- `assets/appicon.png` 是 1024px 原始圖，僅作素材來源，頁面不引用；頁面用 `logo.png`（128px）、`apple-touch-icon.png`（180px）、`og-image.png`（1200×630，用 PIL 從 appicon 合成）
+- SEO：單一 URL 無法對爬蟲提供多語言內容，靜態 HTML 的文案與 meta 以英文為準，JS 只在瀏覽器端切換；hreflang 已移除（同一 URL 多個 hreflang 無效）

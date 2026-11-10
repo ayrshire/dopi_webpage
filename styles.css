@@ -94,9 +94,7 @@ a:hover { color: var(--brand-hover); }
 /* 中文文字斷字優化 */
 .feature-main-title,
 .use-content h3,
-.problem-title,
-.slogan-text,
-.slogan-subtitle {
+.problem-title {
   word-break: keep-all;
   overflow-wrap: break-word;
   line-break: strict;
@@ -231,21 +229,29 @@ a:hover { color: var(--brand-hover); }
 /* ==========================================================================
    6. Hero 區塊
    ========================================================================== */
-.video-hero {
-  min-height: calc(85vh - var(--navbar-height));
-  padding-top: var(--spacing-2xl);
+.hero {
+  padding: var(--spacing-3xl) 0 var(--spacing-2xl);
   text-align: center;
 }
 
-.video-hero .container {
+.hero .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
+  max-width: 860px;
 }
 
-.video-hero .hero-title {
+.hero .app-badges {
+  margin-top: var(--spacing-md);
+}
+
+.hero-note {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.hero .hero-title {
   font-size: var(--text-4xl);
   font-weight: 400;
   color: var(--text);
@@ -255,7 +261,7 @@ a:hover { color: var(--brand-hover); }
 }
 
 
-.video-hero .hero-subtitle {
+.hero .hero-subtitle {
   font-size: var(--text-xl);
   color: var(--text-light);
   font-weight: 400;
@@ -402,7 +408,6 @@ a:hover { color: var(--brand-hover); }
 .feature-card {
   padding: var(--spacing-2xl) var(--spacing-lg);
   text-align: center;
-  min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -468,20 +473,6 @@ a:hover { color: var(--brand-hover); }
 /* ==========================================================================
    11. 品牌標語區塊
    ========================================================================== */
-.brand-slogan {
-  padding: var(--spacing-4xl) 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.slogan-subtitle {
-  font-size: var(--text-2xl);
-  color: var(--text);
-  font-weight: 400;
-  margin-top: var(--spacing-md);
-  text-align: center;
-}
 
 /* ==========================================================================
    11.5. FAQ 區塊
@@ -567,12 +558,12 @@ a:hover { color: var(--brand-hover); }
    ========================================================================== */
 .download-apps {
   text-align: center;
-  padding-block: 40px;
 }
 
-.download-title {
-  font-size: var(--text-3xl);
+.download-subtitle {
+  font-size: var(--text-xl);
   color: var(--text-light);
+  margin-top: var(--spacing-md);
 }
 
 .app-badges {
@@ -691,19 +682,15 @@ footer p {
 
 /* 平板橫向 (980px以下) */
 @media (max-width: 980px) {
-  .video-hero {
-    min-height: calc(75vh - var(--navbar-height));
-  }
-
-  .video-hero .container {
+  .hero .container {
     gap: var(--spacing-lg);
   }
 
-  .video-hero .hero-title {
+  .hero .hero-title {
     font-size: var(--text-4xl);
   }
 
-  .video-hero .hero-subtitle {
+  .hero .hero-subtitle {
     font-size: var(--text-xl);
   }
 
@@ -714,23 +701,19 @@ footer p {
 
 /* 平板直向 (768px以下) */
 @media (max-width: 768px) {
-  .video-hero {
-    min-height: calc(70vh - var(--navbar-height));
-  }
-
-  .video-hero .container {
+  .hero .container {
     gap: var(--spacing-lg);
   }
 
   /* 主標題層級統一 (H1, H2) */
-  .video-hero .hero-title,
+  .hero .hero-title,
   .section-title,
   .problem-title {
     font-size: var(--text-3xl);
   }
 
   /* 副標題層級統一 */
-  .video-hero .hero-subtitle,
+  .hero .hero-subtitle,
   .problem-subtitle {
     font-size: var(--text-lg);
   }
@@ -762,14 +745,6 @@ footer p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .brand-slogan {
-    padding: var(--spacing-3xl) 0;
-  }
-
-  .slogan-text {
-    font-size: var(--text-3xl);
-    line-height: 1.3;
-  }
 }
 
 /* 手機橫向 (640px以下) */
@@ -797,36 +772,31 @@ footer p {
     padding-inline: var(--spacing-md);
   }
 
-  .video-hero {
-    min-height: calc(65vh - var(--navbar-height));
-  }
-
-  .video-hero .container {
+  .hero .container {
     gap: var(--spacing-md);
   }
 
   /* 主標題層級統一 (H1, H2) */
-  .video-hero .hero-title,
+  .hero .hero-title,
   .section-title,
   .problem-title {
     font-size: var(--text-2xl);
     font-weight: 600;
   }
 
-  .video-hero .hero-title {
+  .hero .hero-title {
     margin-bottom: var(--spacing-xs);
   }
 
   /* 副標題層級統一 */
-  .video-hero .hero-subtitle,
+  .hero .hero-subtitle,
   .problem-subtitle,
-  .section-subtitle,
-  .slogan-subtitle {
+  .section-subtitle {
     font-size: var(--text-xl);
     font-weight: 400;
   }
 
-  .video-hero .hero-subtitle {
+  .hero .hero-subtitle {
     margin-bottom: var(--spacing-lg);
   }
 
@@ -906,14 +876,14 @@ footer p {
 /* 手機直向 (480px以下) */
 @media (max-width: 480px) {
   /* 主標題層級適度調整 (H1, H2) */
-  .video-hero .hero-title,
+  .hero .hero-title,
   .section-title,
   .problem-title {
     font-size: var(--text-2xl);
   }
 
   /* 副標題層級改善可讀性 */
-  .video-hero .hero-subtitle,
+  .hero .hero-subtitle,
   .problem-subtitle {
     font-size: var(--text-base);
   }
@@ -924,14 +894,6 @@ footer p {
     font-size: var(--text-lg);
   }
 
-  .slogan-text {
-    font-size: var(--text-2xl);
-    background: var(--brand);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: none;
-  }
 }
 
 /* ==========================================================================
@@ -1039,11 +1001,28 @@ footer p {
   }
 }
 
+.footer-links {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-links a {
+  color: var(--muted);
+}
+
+.footer-links a:hover {
+  color: var(--brand);
+}
+
+.footer-links span {
+  margin: 0 var(--spacing-xs);
+  color: var(--muted);
+}
+
 /* ==========================================================================
    16. 動畫優化
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  .video-hero .hero-title::after {
+  .hero .hero-title::after {
     animation: none;
   }
 
