@@ -61,7 +61,7 @@ npx serve .
 | 區塊 | HTML 結構 | 關鍵 class |
 |------|-----------|-----------|
 | 導航列 | `<nav class="navbar">` | `.nav-container`, `.nav-brand`, `.nav-cta` |
-| Hero | `<header class="hero">` | 兩欄：`.hero-copy`（h1、`.hero-subtitle`、`.app-badges`、`.hero-note`、`.hero-proof` 評分列）＋ `.hero-shot`（`assets/hero-summary.webp`，裁自 App Store 商店截圖第 1 張） |
+| Hero | `<header class="hero">` | 兩欄：`.hero-copy`（h1、`.hero-subtitle`、`.app-badges`、`.hero-note`、`.hero-proof` 評分列）＋ `.hero-shot`（繁中用 `assets/hero-summary.webp`，裁自 App Store 商店截圖第 1 張；其他語言用 `hero-summary-en.webp`，Pixel 7a 英文介面截圖＋PIL 合成手機框；切換靠 `data-i18n-src`＝`hero.shot`） |
 | 用戶推薦 | `<section class="social-section">` | `.social-grid`：`.video-frame`（YouTuber 實測 jBdn6qpNiI4，start=162）＋ `.review-card`×2（App Store 台灣公開評論，四語言翻譯） |
 | 使用場景 | `<section class="section">` | `.use-cases`, `.use-card.horizontal` |
 | 功能特色 | `<section class="section">` | `.features`, `.feature-card`, `.feature-card-1/2/3` |
